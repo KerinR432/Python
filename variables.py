@@ -38,6 +38,40 @@ print("Bienvenidos todos los de",curso,ciclo) #el print puede componer todo tipo
 print("-------------------------")
 #RECORGER DATOS DEL TECLADO
 
-edad1 = input("Introduce tu edad: ") #es un input String
-print(edad1)
+#edad1 = input("Introduce tu edad: ") #es un input String
+#if edad1 < 18:
+#        print("Eres menor de edad")
+#else :
+#    print("Eres mayor de edad")
+#print(edad1)
+
+edad2 = int(input("Introduce tu edad: ")) #es un input cambia el valor a int
+if int(edad2) < 18: #castea el valor y cambia el valor a int
+        print("Eres menor de edad")
+else :
+    print("Eres mayor de edad")
+
+
+sueldo = float(input("Dime tu sueldo: "))
+if sueldo > 18000.56:
+    print("Debes de ser Rico")
+else :
+    print("No se si tienes para un piso")
+
+print("Fin del programa")
+# el and or y not se escribe con palabras y no pasa nada
+
+#BUCLES
+
+for n in range(0,10,2): # un bluce for, asi se forma y una 3 es para ir saltando de ese numero a numero
+    print(n)
+print("Fin del programa")
+
+for n in range (10,0,-1): # para decrecer el for
+    print(n)
+
+for c in "Hola Mundo":
+    print(c)
+
+
 
