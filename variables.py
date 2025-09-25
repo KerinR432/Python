@@ -73,5 +73,7 @@ for n in range (10,0,-1): # para decrecer el for
 for c in "Hola Mundo":
     print(c)
 
-
-
+mayor = max(25.6,55,67.6,1)
+print(max)
+menor = min(25.6,55,67.6,1)
+print(menor)
