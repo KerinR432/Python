@@ -4,3 +4,12 @@ el número 3, las letras i por el número 1 y las letras o por el número 0. Con
 las vocales pueden estar escritas en mayúsculas o minúsculas, pero no hace falta que
 tengas en cuenta que además podrían ir acentuadas
 """
+texto = input("Ingresa una cadena de texto:\n ")
+
+texto = texto.lower()
+texto = texto.replace("a","4")
+texto = texto.replace("e","3")
+texto = texto.replace("i","1")
+texto = texto.replace("o","0")
+
+print(texto)
