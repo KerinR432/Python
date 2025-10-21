@@ -33,7 +33,7 @@ while(opcion!= 3):
             numAle = random.randint(1, n)
 
         case 3:
-            print("Salir del jeugo")
+            print("Salir del juego")
         case _:
             print("Introcuciste mal el numero")
 
