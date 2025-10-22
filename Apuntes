@@ -1,0 +1,182 @@
+Claro, aquí tienes los apuntes en formato txt organizados y claros para que puedas usarlos fácilmente:
+
+---
+
+```
+--- APUNTES DE PYTHON ---
+
+# MANEJO DE CADENAS (Strings)
+
+1. Slicing (bocadillo 🥪):
+   - texto[3:8]  --> Subcadena desde posición 3 hasta 7 (8 no incluido).
+   - texto[3]    --> Un solo carácter en posición 3.
+   - texto[-5:-2]--> Recorrer cadena desde atrás (posiciones negativas).
+   - texto[2:-2] --> Mezcla índices positivos y negativos.
+   - texto[2:-2:2] --> Paso o salto, salta de 2 en 2 caracteres.
+   - texto[::2]  --> Caracteres en posiciones pares.
+   - texto[1::2] --> Caracteres en posiciones impares.
+   - texto[::-1] --> Cadena al revés.
+   - texto[::-2] --> Cadena al revés, saltando de 2 en 2.
+
+2. Concatenar cadenas:
+   - "Hola" + "mundo" + "cruel" + str(33)
+   - print("Hola", "mundo", "cruel") --> con comas concatena con espacio.
+
+3. Recorrer cadenas:
+   - for caracter in texto: print(caracter, end="-")
+   - for pos in range(len(texto)): print(pos, "-", texto[pos])
+
+4. Métodos de cadenas:
+   - texto.upper()      --> convierte a mayúsculas.
+   - texto.lower()      --> convierte a minúsculas.
+   - texto.find("m")    --> devuelve la primera posición de 'm', -1 si no existe.
+   - texto.count("o")   --> cuenta cuántas veces aparece 'o'.
+   - texto.replace(" ", "") --> elimina espacios.
+   - texto.replace(" ", "x", 1) --> reemplaza solo la primera aparición.
+   - texto.find("o", 2) --> buscar desde la posición 2.
+
+5. Eliminar espacios de un texto con un bucle:
+```
+
+texto = input("Introduce un texto: ")
+texto2 = " "
+for c in texto:
+if c != " ":
+texto2 += c
+print(texto2, end="")
+
+```
+
+---
+
+# BUCLES
+
+1. Bucle while:
+```
+
+i = 0
+while i < 10:
+print(i)
+i += 1
+
+```
+
+2. Bucle for con range:
+- for n in range(0, 10, 2): --> va de 0 a 10 saltando de 2 en 2.
+- for n in range(10, 0, -1): --> va de 10 a 1 de forma decreciente.
+- for c in "Hola Mundo": --> recorre cada carácter.
+
+3. Uso de _ en for cuando no usas la variable:
+```
+
+for _ in range(5):
+print(random.randint(1,6))
+
+```
+
+---
+
+# VARIABLES Y TIPOS
+
+- Numericas: edad = 56
+- Texto (String): texto = "Cincuenta seis"
+- Decimal (float): precio = 54.4
+- Booleano: acertado = True
+- Constantes (convención): MESES_DEL_ANNO = 12
+
+---
+
+# OPERADORES ARITMÉTICOS
+
+- División entera: 5 // 2  --> 2
+- Resto (módulo): 5 % 2     --> 1
+- División normal: 5 / 2    --> 2.5
+- Prioridad de operaciones: nuevo = precio * (5 + edad)
+- Decimales: round(pi, 2) redondea a 2 decimales.
+
+---
+
+# ENTRADA DE DATOS
+
+- input() devuelve String:
+```
+
+edad1 = input("Introduce tu edad: ")
+
+```
+- Convertir a int:
+```
+
+edad2 = int(input("Introduce tu edad: "))
+if edad2 < 18:
+print("Eres menor de edad")
+else:
+print("Eres mayor de edad")
+
+```
+- Convertir a float:
+```
+
+sueldo = float(input("Dime tu sueldo: "))
+if sueldo > 18000.56:
+print("Debes de ser Rico")
+else:
+print("No se si tienes para un piso")
+
+```
+
+---
+
+# FUNCIONES ÚTILES
+
+- max(), min():
+```
+
+mayor = max(25.6, 55, 67.6, 1)
+menor = min(25.6, 55, 67.6, 1)
+print(mayor, menor)
+
+```
+
+---
+
+# ESTRUCTURAS CONDICIONALES AVANZADAS: match (Python 3.10+)
+
+```
+
+numero = 0
+while numero != 5:
+numero = int(input("Introduce un número del 1 al 4: "))
+match numero:
+case 2:
+print("El número es el 2")
+case 3 | 4:
+print("El número es el 3 o el 4")
+case 5:
+print("Salir")
+case _:
+print("No es ni el 2 ni el 3")
+print("FIN")
+
+```
+
+---
+
+# IMPORTAR LIBRERÍAS Y USO DE RANDOM
+
+```
+
+import random
+azar = random.randint(1,6)  # Número aleatorio entre 1 y 6 (ambos incluidos)
+print(azar)
+
+for _ in range(5):
+print(random.randint(1,6))
+
+```
+
+---
+
+¡Fin de los apuntes!
+Si quieres que te los guarde en un archivo txt, dime y te lo creo.
+```
