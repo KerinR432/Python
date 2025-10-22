@@ -6,8 +6,16 @@ escrita en mayúsculas o minúsculas."""
 
 
 
-for i in DNITem:
-    if DNITem[i]>1 and DNITem[i] <= 9:
-        print("Bien el DNI esta bien")
-    else:
-        print("No tiene numero o ha fallado el programa")
+dni = input("Introduce tu DNI\n")
+
+if len(dni) ==9:
+    print("Bien primera seguridad cumplida")
+else:
+    print("Error❌")
+
+canDigito = sum(c.isdigit() for c in dni) #Lo saque de chatgpt pero entiendo que recorre toda la cadena dijiendo cuales
+#son digitos y luego suma todas esas veces.
+if canDigito == 8:
+    print("Bien has pasado el segundo punto de seguridad")
+else:
+    print("Error❌")
