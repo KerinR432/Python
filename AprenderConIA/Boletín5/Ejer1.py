@@ -1,10 +1,15 @@
-"""Programa que simula una lotería primitiva: genera seis números aleatorios
-únicos entre 1 y 49 (sin repeticiones)."""
+"""1. Escribir un programa que genere seis números aleatorios entre el 1 y el 49 sin que
+ninguno de ellos esté repetido (simulando una lotería primitiva)."""
 
 import random
 
-# Generamos directamente 6 números aleatorios únicos entre 1 y 49
-numeros_ganadores = random.sample(range(1, 50), 6)
+# Generamos 6 números únicos aleatorios entre 1 y 49 usando sample para evitar repeticiones
+loteria = random.sample(range(1, 50), 6)  # range(1,50) incluye del 1 al 49
 
-# Mostramos los números ganadores ordenados
-print(f"Los números ganadores son: {sorted(numeros_ganadores)}")
+# Ordenamos los números para una presentación más bonita (opcional, pero mejora la legibilidad)
+loteria.sort()
+
+# Imprimimos los números de forma atractiva para el usuario
+print("¡Los números ganadores de la lotería son:")
+print(", ".join(map(str, loteria)))  # Une los números con comas
+print("¡Buena suerte!")  # Mensaje amigable extra
