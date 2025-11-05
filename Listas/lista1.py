@@ -81,3 +81,18 @@ print(random.choice(alumnos))#extrae un elemento random de un a lista
 print(random.sample(alumnos,4))#sample extrae tanto elemento que queramos sin querer repeticiones
 random.shuffle(alumnos)#desordena la lista original
 print(alumnos)
+
+listaNombre = ["Ana","Verónica","Luis","Rafael"]
+for nombre in listaNombre:#* Si no nos importa el indice
+    print(nombre)
+for i in range(len(listaNombre)):#* sinos interesa la posición y el contenido
+    print(i,"-",listaNombre[i])
+
+
+for i, nombre in enumerate(listaNombre): #* esta forma son equivalente a las otras 2
+    print(i,"-",nombre)
+
+num1 = [4]
+num2 = num1.copy() #*esto crea una copia o crear una lista nueva
+num2[0] *= 2
+print(num1) #* no asignas nueva línea, sino que crea una referencia
