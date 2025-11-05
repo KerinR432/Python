@@ -30,4 +30,11 @@ profesSegundo =  {"José María","Agustín","Puche","Pedro"}
 print(profesPrimero & profesSegundo) #* intercepción, nos devuelve los dos profesores repitos en el conjunto, los comunes
 print(profesPrimero | profesSegundo)#* la unión consegui todos pero se consigue una ves
 print(profesSegundo - profesPrimero)#* la diferencia
-print(profesPrimero - profesSegundo)#* quita los que se repite o lo que no estan el común
+print(profesPrimero - profesSegundo)#* quita los que se repite o lo que no estan el comúnç
+intersecion = profesPrimero & profesSegundo #* devuelve otro conjunto
+print(intersecion)
+#*METODOS
+print(f"metodos intersecion {profesPrimero.intersection(profesSegundo)}")
+print(f"metodos union {profesPrimero.union(profesSegundo)}")
+print(f"metodos diferencia {profesPrimero.difference(profesSegundo)}")
+print(f"metodos diferencia al reves {profesSegundo.intersection(profesPrimero)}")
