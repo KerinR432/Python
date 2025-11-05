@@ -24,3 +24,10 @@ print(conjunto1)
 
 conjunto1.clear() #* Elimina todo el conjunto
 print(conjunto1)
+
+profesPrimero = {"Natalia","José María","Pedro","Yago"}
+profesSegundo =  {"José María","Agustín","Puche","Pedro"}
+print(profesPrimero & profesSegundo) #* intercepción, nos devuelve los dos profesores repitos en el conjunto, los comunes
+print(profesPrimero | profesSegundo)#* la unión consegui todos pero se consigue una ves
+print(profesSegundo - profesPrimero)#* la diferencia
+print(profesPrimero - profesSegundo)#* quita los que se repite o lo que no estan el común

@@ -1,5 +1,5 @@
 texto = "33"
-if texto.isdigit(): # este comprueva si existe un numero entero o solo tiene texto
+if texto.isdigit(): # este comprueba si existe un numero entero o solo tiene texto
     print("Puedo convertirlo a entero")
 else:
     print("No puedo convertirlo a entero")
