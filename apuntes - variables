@@ -1,0 +1,75 @@
+## Tipos de variables en Python
+
+- **Enteros (int)**: números sin decimales, positivos o negativos.
+  Ejemplo: edad = 56
+- **Cadenas de texto (str)**: secuencias de caracteres entre comillas.
+  Ejemplo: texto = "Cincuenta seis"
+- **Números decimales (float)**: números con parte decimal.
+  Ejemplo: precio = 54.4
+- **Booleanos (bool)**: valores lógicos `True` o `False`.
+  Ejemplo: acertado = True
+
+***
+
+## Constantes
+
+No existen constantes reales en Python, pero por convención se usan variables con nombres en mayúscula para indicar que no deben cambiar.
+Ejemplo: MESES_DEL_ANNO = 12
+
+***
+
+## Operadores aritméticos
+
+- División entera: 5//2  # Resultado: cociente sin decimales
+- Módulo (resto): 5%2
+- División normal: 5/2
+- Prioridad de operaciones: primero paréntesis, luego multiplicaciones y divisiones, después sumas y restas.
+Ejemplo: nuevo = precio * (5 + edad)
+
+***
+
+## Operaciones con cadenas
+
+- Concatenación con `+` o con `,` en `print()`.
+- print(texto, "Mundo", end=" ", sep="-") para controlar el final y el separador.
+- Puedes combinar variables de diferente tipo convirtiendo a string con `str()`.
+- Tuplas creadas con comas, con o sin paréntesis:
+  texto6 = "Hola", "mundo", "cruel"
+
+***
+
+## Recoger datos por teclado
+
+- La función `input()` recibe texto (string) siempre.
+- Para usar números se usa conversión con `int()` o `float()`.
+Ejemplo:
+
+```python
+edad2 = int(input("Introduce tu edad: "))
+if edad2 < 18:
+    print("Eres menor de edad")
+else:
+    print("Eres mayor de edad")
+```
+
+***
+
+## Bucles `for`
+
+- for n in range(0, 10, 2): recorre del 0 al 9 saltando de 2 en 2.
+- Se puede usar para contar decrecientemente con paso negativo.
+- Se puede recorrer una cadena mostrando cada carácter.
+
+***
+
+## Funciones `max()` y `min()`
+
+- Devuelven el valor máximo o mínimo entre los argumentos.
+Ejemplo:
+
+```python
+mayor = max(25.6, 55, 67.6, 1)
+print(mayor)  # Imprime 67.6
+menor = min(25.6, 55, 67.6, 1)
+print(menor)  # Imprime 1
+```

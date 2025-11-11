@@ -1,0 +1,66 @@
+## ¿Qué es una tupla?
+
+Una **tupla** es una colección ordenada de elementos, pero **NO se puede modificar** (inmutable).
+Se crean usando paréntesis `()` o simplemente separando elementos por comas.
+
+```python
+lista = [1,2,3]              # Lista: se crea con []
+tupla = (1,2,3)              # Tupla: se crea con ()
+tupla2 = ("ana","Pepe","Pedro")  # Tupla de strings
+tupla3 = ("Maria",28.5,False)    # Tupla heterogénea
+tupla4 = 4,5,6               # También es tupla aunque no lleve ()
+```
+
+Se pueden mostrar en pantalla y verás los paréntesis:
+print(tupla)
+print(tupla4)
+
+***
+
+## Casos especiales y conversión
+
+- Tupla vacía:
+  tupla5 = ()
+- Tupla de un solo valor, se necesita la coma:
+  p2 = (3.14159,)
+- Si no se pone la coma, Python lo trata como número, no como tupla:
+  pi = (3.14159) (esto NO es una tupla)
+
+- Convertir lista a tupla:
+  tupla6 = tuple(lista)
+- Convertir tupla a lista:
+  lista2 = list(tupla4)
+- Convertir tupla a texto (string):
+  texto = str(tupla6)
+
+***
+
+## Anidación y acceso
+
+Las tuplas pueden tener otras tuplas o listas dentro.
+
+```python
+tupla7 = (1,2,(1,3,4),5,[1,2,3],7)  # Tupla anidada
+print(tupla7)
+```
+
+Puedes acceder a elementos por índices negativos como en las listas:
+print(tupla7[-2)]   # Accede a la lista anidada dentro de la tupla
+
+***
+
+## ¿Se pueden modificar las tuplas?
+
+No se puede cambiar el contenido de una tupla, **salvo** si contiene una lista interna:
+tupla7 = 23   # Modifica la lista dentro de la tupla
+print(tupla7)
+
+***
+
+## Resumen rápido para el examen
+
+- Se crea con paréntesis `()` o solo con comas.
+- Son inmutables (no pueden cambiarse).
+- Convertibles entre listas y tuplas fácilmente.
+- Admite diferentes tipos de datos y estructuras anidadas como listas o tuplas internas.
+- Solo puedes modificar una lista que esté **dentro** de una tupla, la tupla en sí no se modifica.

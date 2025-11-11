@@ -1,0 +1,87 @@
+### Concepto de conjunto en Python
+
+Un **conjunto** es una colección desordenada de elementos **únicos** (sin repetición).
+Se define con llaves `{}` o con el constructor `set()`.
+
+```python
+conjunto1 = {"Ana", "Pedro", "Luis", "Eva", "Ana"}
+conjunto2 = set(["Ana", "Pedro", "Luis", "Eva", "Ana"])
+```
+
+- No mantienen un orden fijo (puede variar en cada ejecución).
+- No admiten duplicados: `"Ana"` solo se guarda una vez.
+- Puedes crear un conjunto a partir de una lista con `set([lista])`.
+
+***
+
+### Recorrer un conjunto
+
+Puedes recorrer todos los elementos con un bucle `for`:
+
+```python
+for nombre in conjunto1:
+    print(nombre)
+```
+
+No puedes acceder directamente con índices (porque no hay orden).
+
+***
+
+### Comprobar si existe un elemento
+
+Usa el operador `in`:
+
+```python
+if "Ana" in conjunto1:
+    print("Ana está en el conjunto")
+```
+
+***
+
+### Operaciones básicas con conjuntos
+
+| Acción | Código | Explicación |
+|--------|---------|-------------|
+| Añadir elementos | `conjunto1.add("Manuel")` | Añade 1 nuevo elemento |
+| Eliminar uno existente | `conjunto1.remove("Ana")` | Elimina el elemento, da error si no existe |
+| Eliminar sin error | `conjunto1.discard("Eustaquio")` | No da error si no existe |
+| Eliminar al azar | `conjunto1.pop()` | Devuelve y elimina un elemento aleatorio |
+| Vaciar todo | `conjunto1.clear()` | Borra todos los elementos |
+| Contar elementos | `len(conjunto1)` | Devuelve el número de elementos |
+
+***
+
+### Operaciones entre conjuntos
+
+Dadas dos colecciones:
+
+```python
+profesPrimero = {"Natalia", "José María", "Pedro", "Yago"}
+profesSegundo = {"José María", "Agustín", "Puche", "Pedro"}
+```
+
+| Operación | Símbolo / Método | Resultado |
+|------------|------------------|------------|
+| Intersección (comunes) | `profesPrimero & profesSegundo` o `profesPrimero.intersection(profesSegundo)` | Elementos presentes en ambos |
+| Unión | `profesPrimero | profesSegundo` o `profesPrimero.union(profesSegundo)` | Todos los elementos sin repetir |
+| Diferencia | `profesPrimero - profesSegundo` o `profesPrimero.difference(profesSegundo)` | Elementos solo en el primero |
+| Diferencia inversa | `profesSegundo - profesPrimero` o `profesSegundo.difference(profesPrimero)` | Elementos solo en el segundo |
+
+Ejemplo:
+
+```python
+print(profesPrimero & profesSegundo)  # {'José María', 'Pedro'}
+print(profesPrimero | profesSegundo)  # Todos sin repetir
+print(profesSegundo - profesPrimero)  # {'Agustín', 'Puche'}
+```
+
+***
+
+### Resumen para examen
+
+- Los conjuntos **no tienen orden** y **no permiten duplicados**.
+- Se crean con `{}` o `set([])`.
+- Son muy útiles para:
+  - Eliminar duplicados.
+  - Comparar y combinar colecciones.
+- Las operaciones más importantes son: **add**, **remove**, **discard**, **clear**, **union**, **intersection**, **difference**.

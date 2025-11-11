@@ -1,0 +1,38 @@
+## Estructura básica de match-case
+
+Se utiliza para comparar una variable con distintos valores posibles y ejecutar código según la coincidencia.
+
+```python
+match variable:
+    case valor1:
+        # Código para valor1
+    case valor2 | valor3:   # Or: si es valor2 o valor3
+        # Código para valor2 o valor3
+    case _:
+        # Código por defecto (como else)
+```
+
+***
+
+## Ejemplo práctico
+
+```python
+numero = 0
+while numero != 5:
+    numero = int(input("Introduce un número del 1 al 4: "))
+    match numero:
+        case 2:
+            print("El número es el 2")
+        case 3 | 4:
+            print("El número es el 3 o el 4")
+        case 5:
+            print("Salir")
+        case _:
+            print("No es ni el 2 ni el 3 ni el 4")
+print("FIN")
+```
+
+- Cuando `numero` es 2, imprime "El número es el 2".
+- Cuando es 3 o 4, entra en el mismo bloque por el símbolo `|`.
+- Si es 5, indica salir y termina el bucle.
+- Con `_` se captura cualquier otro valor para dar una respuesta por defecto.

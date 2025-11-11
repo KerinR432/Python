@@ -1,0 +1,51 @@
+## Método isdigit()
+
+- Devuelve **True** si **todos los caracteres** de la cadena son dígitos (números enteros positivos sin signos ni espacios).
+- Devuelve **False** si hay letras, símbolos o espacios.
+
+Ejemplo:
+
+```python
+texto = "33"
+if texto.isdigit():
+    print("Puedo convertirlo a entero")
+else:
+    print("No puedo convertirlo a entero")
+```
+
+En este caso, imprime "Puedo convertirlo a entero" porque `"33"` es solo dígitos.
+
+***
+
+## Método isalpha()
+
+- Devuelve **True** si **todos los caracteres** de la cadena son letras (a-z, A-Z, sin números ni símbolos).
+- Devuelve **False** si hay dígitos, signos o espacios.
+
+Ejemplo:
+
+```python
+texto = "33"
+if texto.isalpha():
+    print("No tiene número")
+else:
+    print("Sí es número")
+```
+
+Aquí imprime "Sí es número" porque `"33"` no contiene letras.
+
+***
+
+## Diferencias clave
+
+| Método     | Qué verifica                                      | Resultado esperado para `"33"` | Resultado esperado para `"abc"` | Resultado esperado para `"abc123"` |
+|------------|--------------------------------------------------|--------------------------------|---------------------------------|------------------------------------|
+| `isdigit()` | Todos caracteres son dígitos                      | True                           | False                           | False                             |
+| `isalpha()` | Todos caracteres son letras                       | False                          | True                            | False                             |
+
+***
+
+## Usos comunes
+
+- `isdigit()` es útil para validar que una cadena representa un número entero.
+- `isalpha()` sirve para confirmar que solo hay letras (por ejemplo, validar nombres).

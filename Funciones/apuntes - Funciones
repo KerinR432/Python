@@ -1,0 +1,123 @@
+## ¿Qué es una función?
+
+Una función es un bloque de código reutilizable que realiza una tarea específica.
+Se define con `def` y puede tener parámetros, devolver valores, o usarse solo para agrupar instrucciones.
+
+***
+
+## Cómo crear y llamar funciones
+
+```python
+def miFuncion():
+    print("Hola soy una función")
+
+miFuncion()  # Llama a la función
+```
+
+***
+
+## Funciones con parámetros
+
+Permiten recibir valores para trabajar dentro de la función.
+
+```python
+def funcionConParametro(mensaje):
+    valor = 5
+    print(mensaje, valor)
+
+funcionConParametro("Hola Mundo")  # Imprime "Hola Mundo 5"
+```
+
+**Nota:** Las variables dentro de la función son independientes de fuera (ámbito local).
+
+***
+
+## Funciones con retorno
+
+Puedes devolver valores con `return`.
+
+```python
+def valorRetorno(nombre, despedida):
+    return "Hola " + nombre + despedida
+
+nombre = "José María"
+print(valorRetorno(nombre, " Que te vaya bien"))  # Imprime la frase completa
+```
+
+Puedes devolver varios valores separados por coma (tupla):
+
+```python
+def devuelveNumeros():
+    return 1, 2, 3
+
+n1, n2, n3 = devuelveNumeros()
+print(n1, n2, n3, sep="-")  # Imprime "1-2-3"
+```
+
+***
+
+## Paso de parámetros: copia o referencia
+
+- **Tipos simples (int, str...):** se pasa una copia, no se altera el original.
+- **Listas y objetos mutables:** la función puede modificar el original.
+
+```python
+def funcion(valor):
+    valor *= 5
+    print(valor)
+
+n = 2
+funcion(n)  # Imprime 10
+print(n)    # Imprime 2 (no cambia)
+
+def funcion2(valor):
+    valor[0] *= 5
+    print(valor)
+
+n = [2]
+funcion2(n)   # Imprime [10]
+print(n)      # Imprime [10] (SÍ cambia el original)
+```
+
+***
+
+## Parámetros por defecto
+
+Puedes indicar un valor por defecto para un parámetro.
+
+```python
+def valorRetorno2(nombre, despedida=" te veo pronto!"):
+    return "Hola " + nombre + despedida
+
+print(valorRetorno2(nombre, " Que te vaya bien"))  # Usa segundo parámetro dado
+print(valorRetorno2("Antonio"))  # Usa el valor por defecto
+```
+
+***
+
+## Número variable de parámetros
+
+Con `*parámetro` puedes recibir cualquier número de argumentos (tupla).
+
+```python
+def muestraProfe(*nombres):
+    print(nombres)
+
+muestraProfe("Natalia","Agustín")
+muestraProfe("Pedro","José María","Ana","Puche")
+```
+
+***
+
+## Desempaquetado de argumentos
+
+Puedes usar el operador `*` para pasar listas o tuplas como argumentos:
+
+```python
+def repiteNombre(veces, nombre):
+    for _ in range(veces):
+        print(nombre, end=" *** ")
+
+datos = [2, "pepe"]
+repteNombre(*datos)
+```

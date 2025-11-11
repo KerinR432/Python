@@ -1,0 +1,130 @@
+## ¿Qué es una lista en Python?
+
+Una **lista** es una colección ordenada y mutable de elementos.
+Puedes almacenar cualquier tipo de dato en una lista: números, texto, booleanos, otras listas, etc.
+
+```python
+lista = []                  # Lista vacía
+lista2 = list()             # Otra forma de crear lista vacía
+lista3 = [2,4,589,33,1,44]  # Lista con números, puede haber repetidos
+lista4 = ["Eva","alvaro","Sara"]           # Lista de strings
+lista5 = [34,"Jose Maria",False,45.6,2,"Perez",[1,5,"DAM"]]   # Lista heterogénea
+```
+
+***
+
+## Cómo recorrer una lista
+
+- Con `for elemento in lista:`
+- Con `for i in range(len(lista)):`
+
+```python
+for i in lista5:
+    print(i)
+
+for i in range(0, len(lista5)):
+    print(i, "-", lista5[i])
+```
+
+Puedes acceder a elementos dentro de sublistas usando dos índices:
+print(lista5)
+
+***
+
+## Cómo trabajar con matrices (listas 2D)
+
+```python
+matriz = [[1,2,3],[4,5,6],[7,8,9]]
+print(matriz[2][0])  # Accede al primer elemento de la tercera fila
+```
+
+***
+
+## Operaciones básicas con listas
+
+- **Sumar listas:**
+  lista6 = lista3 + lista4
+- **Extender listas:**
+  lista3.extend(lista4)  # Añade los elementos sin crear nueva lista
+- **Insertar elementos:**
+  lista7.insert(1,333)  # Inserta antes de la posición indicada
+- **Eliminar elementos:**
+  elemento = lista7.pop(2)  # Elimina en la posición indicada y recupera el valor
+  lista7.remove(3)  # Elimina un elemento por valor (primer aparición)
+
+***
+
+## Cómo ordenar listas
+
+```python
+lista7.sort()  # Ordena numéricamente o por letras
+# lista7.sort(reverse=True)  # Ordena al revés
+```
+
+***
+
+## Buscar elementos en una lista
+
+- Con `in`
+- Con `.count()` para contar cuántas veces aparece
+- Con `.index()` para encontrar posición
+
+```python
+if 333 not in lista7:
+    print("No está en la lista")
+else:
+    print("Está en la lista")
+    print(lista7.count(333))
+```
+
+***
+
+## Conversión entre texto y listas
+
+- Convertir texto en lista:
+  lista7 = list(texto)
+- Convertir lista a texto:
+  texto2 = str(lista7)
+- Limpiar el texto:
+  texto2.replace("[", " ") y texto2.replace("", " ")]
+
+***
+
+## Slicing y reversa
+
+- lista7[::-1]  # Invierte la lista
+- lista7[::2]   # Extrae elementos saltando de 2 en 2
+
+***
+
+## Uso de random con listas
+
+```python
+random.choice(alumnos)      # Extrae un elemento aleatorio
+random.sample(alumnos, 4)   # Extrae varios elementos sin repetir
+random.shuffle(alumnos)     # Desordena la lista
+```
+
+***
+
+## Recorrer listas y obtener índice
+
+```python
+for nombre in listaNombre:
+    print(nombre)
+
+for i in range(len(listaNombre)):
+    print(i, "-", listaNombre[i])
+
+for i, nombre in enumerate(listaNombre):
+    print(i, "-", nombre)
+```
+
+***
+
+## Copiar listas
+
+```python
+num2 = num1.copy()
+```
+- Cuando copias una lista con `.copy()`, modificas la copia y el original **no cambia**.

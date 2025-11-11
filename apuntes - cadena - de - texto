@@ -1,0 +1,84 @@
+## ¿Qué es el slicing en strings?
+
+El slicing permite extraer una subcadena de una cadena original usando la sintaxis:
+
+texto[inicio:fin:paso]
+
+- **inicio:** índice desde donde empieza (incluido).
+- **fin:** índice donde termina (no incluido).
+- **paso:** salto entre caracteres (opcional, por defecto 1).
+
+***
+
+## Ejemplos básicos
+
+```python
+texto = "Hola mundo"
+print(texto[3:8])    # Desde el índice 3 hasta 7 (no incluye el 8)
+print(texto[3])      # Solo el carácter en la posición 3
+print(texto[-5:-2])  # Desde 5 hacia atrás hasta 3 hacia atrás
+print(texto[2:-2])   # Desde índice 2 hasta 2 hacia atrás
+```
+
+***
+
+## Usando el tercer parámetro (paso)
+
+El tercer parámetro indica el salto entre caracteres:
+
+```python
+print(texto[2:-2:2])  # Cada 2 caracteres desde el índice 2 hasta -2
+print(texto[::2])     # Todos los caracteres, cada 2 (pares)
+print(texto[1::2])    # Desde índice 1, saltando 2 (impares)
+```
+
+***
+
+## Dar la vuelta a la cadena
+
+```python
+print(texto[::-1])    # Invierte la cadena
+print(texto[::-2])    # Invierte la cadena, tomando cada 2 caracteres
+```
+
+***
+
+## Concatenar cadenas y recorrerlas
+
+```python
+texto6 = "Hola" + "mundo" + "cruel" + str(33)  # Convierte número a str para concatenar
+for caracter in texto6:
+    print(caracter, end="-")  # Recorre carácter a carácter
+print("\n", len(texto6))       # Longitud del texto
+```
+
+***
+
+## Métodos útiles para strings
+
+- `upper()`: pasa todo a mayúsculas
+- `lower()`: pasa todo a minúsculas
+- `swapcase()`: invierte mayúsculas y minúsculas
+- `find(subcadena)`: devuelve la posición de la subcadena (o -1 si no existe)
+- `count(caracter)`: cuenta cuántas veces aparece un carácter
+- `replace(original, nuevo, n)`: reemplaza `n` veces un texto (si `n` no se pone, reemplaza todo)
+
+Ejemplo:
+
+```python
+texto7 = "Hola mundo cruel 33"
+print(texto7.upper())
+print(texto7.find("m"))
+print(texto7.count("o"))
+print(texto7.replace(" ", ""))
+print(texto7.replace(" ", "x", 1))  # Reemplaza solo el primer espacio
+```
+
+***
+
+## Cómo imprimir y concatenar
+
+- Puedes imprimir varias cadenas separadas con comas, se mostrará con espacios.
+- También puedes concatenar usando el operador `+`.
+- Una tupla se crea con comas y paréntesis opcionales, por ejemplo:
+  texto6 = "Hola", "mundo", "cruel"

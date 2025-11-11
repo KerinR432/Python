@@ -1,0 +1,68 @@
+## ¿Qué es una excepción en Python?
+
+Una **excepción** es un error que ocurre durante la ejecución de un programa.
+Con el manejo de excepciones puedes evitar que tu programa se detenga de golpe y darle una respuesta al usuario.
+
+***
+
+## Bloques básicos para controlar excepciones
+
+El patrón básico es:
+
+```python
+try:
+    # Código que puede dar error
+except TipoDeExcepcion:
+    # Qué hacer si ocurre ese tipo de error
+else:
+    # Qué hacer si NO hay error (opcional)
+finally:
+    # Qué hacer siempre, haya error o no (opcional)
+```
+
+***
+
+### Ejemplo comentado
+
+```python
+from cupsext import cancelJob  # No influye en el uso de excepciones
+correcto = False
+while correcto != True:
+    try:
+        numero = int(input("Introduce un número positivo: ")) # Puede fallar si no es número
+        resultado = 10 / numero  # Puede fallar si pones ‘0’
+        assert numero >= 0, "No admito números negativos"  # Excepción personalizada si es negativo
+        # raise Exception("No es un número positivo")      # Otra forma personalizada
+    except ZeroDivisionError:
+        print("⚠️ Has intentado dividir por '0' ⚠️")
+    except ValueError:
+        print("⚠️ Debes meter un número entero ⚠️")
+    except:
+        print("⚠️ Excepción, pero otra ⚠️")  # Para otros errores no previstos
+    else:
+        print(resultado)  # Se ejecuta solo si no hay errores arriba
+        correcto = True
+    finally:
+        print("Seguimos adelante...")  # Se ejecuta siempre, haya error o no
+print("Programa finalizado")
+```
+
+***
+
+### Explicación de bloques importantes
+
+| Bloque | ¿Cuándo se ejecuta? | Ejemplo de uso |
+|--------|---------------------|----------------|
+| try | Siempre. Aquí va el código que puede fallar | Leer números, dividir, etc. |
+| except | Solo si ocurre el error indicado | ZeroDivisionError, ValueError |
+| else | Solo si el try NO falla | Mostrar resultados exitosos |
+| finally | Siempre, haya error o no | Mensajes de cierre, limpiar recursos |
+
+***
+
+### Errores comunes y personalizados
+
+- **ZeroDivisionError**: intentar dividir entre cero.
+- **ValueError**: convertir texto a número cuando no es posible.
+- **assert**: fuerza una condición, si es falsa lanza `AssertionError`.
+- **raise Exception("mensaje")**: tú creas tu propio error personalizado para casos concretos.
