@@ -72,4 +72,6 @@ mayor = max(25.6, 55, 67.6, 1)
 print(mayor)  # Imprime 67.6
 menor = min(25.6, 55, 67.6, 1)
 print(menor)  # Imprime 1
+
+int(numero,2) es pasar e numero a entero pero con una base
 ```
