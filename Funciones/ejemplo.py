@@ -61,3 +61,7 @@ datos2 = [4,"Luis"]
 repitreNombre(*datos)
 repitreNombre(*datos2)
 repitreNombre(*[3,"eva"])
+
+def prueba(arg1:int,arg2:float) -> str:#*aun con 2 argumento devuelve lo que sea, pero esto es como un comentario
+    #*ayuda a ver como programador
+    return "Hola"
