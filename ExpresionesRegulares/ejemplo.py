@@ -99,5 +99,12 @@ Como en xml existe un tiene formatos como en esa forma
 * puede aparecer ninguna o varias veces
 + igual que el * pero debe aparecer por lo menos una vez
 """)
-praton3 = r"[0-9]{4}[\s|-]?[B-DF-HJL-NPR-TV-z]{3}"
-matricula
+praton3=r"[0-9]{4}[\s|-]?[B-DF-HJL-NPR-TV-z]{3}"
+matricula ="1234 MXP"
+
+if re.fullmatch(praton3,matricula):
+    print("Es valido")
+else:
+    print("No es valido")
+
+patron4=r"[^579]" #* prohibe cualquier caracter de lo siguientes
