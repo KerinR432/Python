@@ -1,7 +1,4 @@
 #------------------------------------------------------
-from sphinx.addnodes import document
-
-
 class CuentaCorriente:
     #* esto seria igual aun static, tiene el valor para todos los objetos
     __numCuentas = 0
