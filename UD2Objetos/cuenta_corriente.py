@@ -1,24 +1,24 @@
 #------------------------------------------------------
 class CuentaCorriente:
-    #* esto seria igual aun static, tiene el valor para todos los objetos
+    #* esto sería igual aún static, tiene el valor para todos los objetos
     __numCuentas = 0
-    #* esto son funciones para crear constructores, se llaman funciones magicas.
+    #* esto son funciones para crear constructores, se llaman funciones mágicas.
     def __init__(self,codigo,titular,saldo=5000):
-        #* Aqui metemos variables y metodos que queramos
-        self.__codigo = codigo #* esto signfiica que es protegido "protected"
+        #* Aquí metemos variables y metodos que queramos
+        self.__codigo = codigo #* esto significa que es protegido "protected"
         self.__titular = []
         self.__titular.append(titular)
-        self.__saldo = saldo #* y esto es privado "private"
+        self.__saldo = saldo #* y esto es privado "prívate"
         CuentaCorriente.__numCuentas+=1
 #-------------------------------------------------
     #* como en java podemos hacer set y get una de las formas
 #*segunda forma
-    #?esto es un getter
+    #? Esto es un getter
     @property
     def saldo(self):
         return self.__saldo
 
-    #?setter, importante siempre definirlo despues del getter
+    #? Setter, importante siempre definirlo después del getter
     @saldo.setter
     def saldo(self,saldo):
         self.__saldo = saldo
@@ -41,7 +41,7 @@ class CuentaCorriente:
     def devolverDatoSucursal():
         print("Calle del Pez, 7. 28032. Madrid")
     #-------------------------------------------------
-    # ! no se puede añadir un atributo que no viene especificado, tiene que devolver un String
+    # !No se puede añadir un atributo que no viene especificado, tiene que devolver un String
     # * puede ser el toString de JAVA
     def __str__(self):
         documento = f"""
@@ -61,7 +61,7 @@ class CuentaCorriente:
 
 #------------------------------------------------------
 #* asi se llama las clases
-c1 = CuentaCorriente(2343434,"Mohame",1000)
+c1 = CuentaCorriente(2343434,"Mohamed",1000)
 c2 = CuentaCorriente(2342432,"Freddy",5000)
 c3 = CuentaCorriente(6567546,"Pepe",100)
 
@@ -79,7 +79,7 @@ funcionSobreCargada(5)
 funcionSobreCargada("HOLA")
 funcionSobreCargada(5)
 #----------------------------------------------------------
-#! no estan protegidos los datos,esto no ayuda mucho, pero esto ayudara a tener una buena practica
+#! No están protegidos los datos, esto no ayuda mucho, pero esto ayudará a tener una buena práctica
 '''
 c1.saldo = 56565
 print(c1.saldo)
@@ -93,18 +93,18 @@ c2.devolverDatoSucursal()
 c1 = c1 + c2
 print(str(c1))
 #----------------------------------------------------
-#* el doble subrayado sera lo que mas vamos utilizar
-#print(c1._titular) #* un subrayado de sirve de mucho
-print(c1._CuentaCorriente__saldo) #* esto es la manera de Python para ocultar esos datos, pero se puede serguir manipulando
+#* el doble subrayado será lo que más vamos utilizar
+#print(c1._titular) #* un subrayado te sirve de mucho
+print(c1._CuentaCorriente__saldo) #* esto es la manera de Python para ocultar esos datos, pero se puede seguir manipulando
 
-#* aqui se muestra, puede ser el toString en JAVA
+#* aquí se muestra, puede ser el toString en JAVA
 print(str(c1))
 print(str(c2))
 print(str(c3))
 #* otra manera
 print(c1)
 #----------------------------------------------------
-#* clase sin funcionalidad vacia
+#* clase sin funcionalidad vacía
 class Alumno:
     pass
 
@@ -115,9 +115,9 @@ Alumno1.edad=24
 Alumno1.telefono=65555232
 
 #----------------------------------------------------
-#*Metodos magicos ocmo metodos dunder
+#*Metodos mágicos como metodos dunder
 """
-__init__ consctructor 
+__init__ constructor 
 __del__ el destructor de objeto
 __str__ del vuelve texto
 __len__ mide la longitud de un objeto

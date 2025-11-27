@@ -14,7 +14,7 @@ class TestCuentaCorriente(unittest.TestCase):
 
     def test_suma_cuentas(self):
         c1 = CuentaCorriente(1, "A", 100)
-        c2 = CuentaCorriente(2, "B", 20)
+        c2 = CuentaCorriente(2, "B", 3000)
 
         c1 = c1 + c2
         self.assertEqual(c1.saldo, 300)
