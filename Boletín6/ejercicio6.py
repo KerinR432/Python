@@ -5,7 +5,7 @@ Ejemplo: AB12-xyZ-75
 """
 import re
 
-textoClave = "AB12-xyZ-75"
+textoClave = input("Introduce un texto: ")
 
 textoCorrecto = f"""
 TU TEXTO SECRETO ES ESTO
@@ -13,10 +13,17 @@ TU TEXTO SECRETO ES ESTO
 textoIncorrecto = f"""
 ERROR ESTAMOS BUSCANDO EL FALLO...
 """
-patronMayus = r"[A-Z]"
-patronMinus = r"[a-z]"
+listaMayuscula = [f"ABCDEFGHYJKLMÑNOPQRSTVUXYZ"]
+patron = r"[A-Z]"
+patronmin = r"[a-z]"
 patronDigito = r"[0-9]"
 
-if re.match(patronMayus,textoClave):
-    textoClave = textoClave.replace(patronMayus,"X")
-    print(textoClave)
+if re.match(patron,textoClave):
+    textoClave = re.sub(patron,"X",textoClave)
+    if(re.search(patronmin,textoClave)):
+        textoClave = re.sub(patronmin,"x",textoClave)
+    if(re.search(patronDigito,textoClave)):
+        textoClave = re.sub(patronDigito, "0", textoClave)
+
+
+print(textoClave)
