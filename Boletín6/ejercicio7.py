@@ -4,3 +4,11 @@ un espacio. A continuación un espacio y la fecha de caducidad en formato MM/YY.
 mes tiene que ser válido (entre 01 y 12)
 Ejemplo: 1234 5678 9012 3456 03/25
 """
+import re
+
+trarjeta = "1234 5678 9012 3456 03/25"
+
+patron = r"[0-9]{4}"
+
+if re.match(patron,trarjeta):
+    print("Entro")
