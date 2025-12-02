@@ -9,17 +9,20 @@ correcto = False
 
 while correcto !=True:
     try:
-        pagar = float(input("Introduce un numero a pagar... "))
-        meses = int(input("Intorduce numero de meses... "))
-        apagarCadaMes = pagar / meses
-        assert meses >= 1,"No puede ser numeros decimales"
-        assert pagar >= 1, "No puede ser numeros decimales"
-    except ZeroDivisionError:
-        print("Error no puedes dividir por cero caballero , haga el favor de hacerlo bien")
-    except:
-        print("Error no puedes introducir numeros negativo o deciamales")
-    else:
-        print(f"durante {meses} meses tienes que pagar cada mes: {apagarCadaMes}€")
-        correcto = True
+        pagar = float(input("Introduce el importe a pagar en euros: "))
+        meses = int(input("Introduce el número de meses: "))
 
+        if pagar <= 0:
+            raise ValueError("El importe debe ser mayor que 0.")
+        if meses <= 0:
+            raise ValueError("El número de meses debe ser un entero positivo.")
+
+        apagarCadaMes = round(pagar / meses, 2)
+    except ValueError as e:
+        print("Error:", e)
+    except ZeroDivisionError:
+        print("Error: no se puede dividir entre cero.")
+    else:
+        print(f"Durante {meses} meses tienes que pagar cada mes: {apagarCadaMes} €")
+        correcto = True
 
