@@ -13,24 +13,20 @@ características) pero si getters apropiados para todas ellas
 evolucione en otro diferente. Para ello si un pokemon puede evolucionar en otro debe de
 tener de alguna forma una referencia al pokemon en el que evoluciona.
 """
-class Pokemon:
-    __codigo = 0
-    __nombre = ""
-    __tipo = []
+import random
 
-    def __init__(self,codigo,nombre,tipo):
+class Pokemon:
+    def __init__(self,codigo,nombre,evolucion = None):
         self.__codigo = codigo
         self.__nombre = nombre
-        self.__tipo = tipo
+        self._evolucion = evolucion
+        self.__pv = random.randint(50,100)
     @property
     def codigo(self):
         return self.__codigo
     @property
     def nombre(self):
         return self.__nombre
-    @property
-    def tipo(self):
-        return self.__tipo
 
     def validarCodigo(self):
         if self.__codigo >=1 and self.__codigo <= 151:
@@ -43,25 +39,23 @@ class Pokemon:
         ║        POKEDEX ENTRY        ║
         ╠═════════════════════════════╣
         ║ Código: {self.__codigo:<15}     ║
-        ║ Nombre: {self.__nombre:<14}      ║
-        ║ Tipo: {self.__tipo:<16}      ║
+        ║ Nombre: {self.__nombre:<1} ║
+        ║ Tipo: {self._evolucion:}      ║
+        ║ vida: {self.__pv}           ║
         ╠═════════════════════════════╣
         ║ ¡Cuida mucho a tu compañero!║
         ╚═════════════════════════════╝
         """
         return informe
 
-p1 = Pokemon(0,"Pichu","Electrico")
-p2 = Pokemon(2,"Pikachu","Electrico")
-p3 = Pokemon(3,"Rachu","Electrico")
-p4 = Pokemon(4,"Zados","volador")
-p5 = Pokemon(5,"Pigout","Volador")
+p3 = Pokemon(3,"Venasaur")
+p2 = Pokemon(2,"Ivysaur",p3)
+p1 = Pokemon(1,"Bulbasaur",p2)
+
 print(p1.codigo)
 print(p1.nombre)
-print(p1.tipo)
 
 print(p1)
 print(p2)
 print(p3)
-print(p4)
-print(p5)
+
