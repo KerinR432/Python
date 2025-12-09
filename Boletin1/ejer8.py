@@ -4,8 +4,12 @@
 número entero) y nos devuelva el dinero que tendríamos que pagar cada mes. No aplicamos
 intereses de ningún tipo y redondeamos a dos decimales.
 """
-
+#* --------------------- Definición de Funciones --------------------------------
 def calcularPagoAlMes(pagar,meses):
+    """
+    Objectivo: Recibimos lo que tienes que pagar y el mes.
+    1.
+    """
     return round(pagar / meses, 2)
 
 salir = False
