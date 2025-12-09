@@ -4,20 +4,30 @@ import random
 #Inicializamos variables
 dado1 = 0
 dado2 = 1
-i = 0
-cont = 0
-print('Soy el dado 1: ',dado1,'Soy el dado 2: ',dado2)  #pedimos por teclado
+varibaleDeSalida = 0
+turnos = 0
+
 
 #Realizamos el bucle While, que mientras y no sea 1 siga generando dados
-while i != 1:
+
+
+while varibaleDeSalida != 1:
     dado1 = random.randint(1, 6)
     dado2 =  random.randint(1,6)
 
     if dado1 == dado2: #hacemos la comparación
-        i=1
-    cont +=1
+        varibaleDeSalida=1
+    turnos +=1
 #Imprimimos por pantalla
-print('VAMOOOOS!!! SALIERON DOS QUE SUERTE, los dados son: ',dado1,dado2)
-print(f'fueron {cont} veces')
+
+informe = f"""
+JUEGO DE LOS DADOS IGUALES
+EL PRIMER DADO ES:{dado1}
+EL SEGUNDO DADO ES {dado2}
+HAS TARDADO {turnos} PARA QUE
+SEAN IGUALES
+"""
+
+print(informe)
 
 

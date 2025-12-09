@@ -5,9 +5,12 @@ número entero) y nos devuelva el dinero que tendríamos que pagar cada mes. No 
 intereses de ningún tipo y redondeamos a dos decimales.
 """
 
-correcto = False
+def calcularPagoAlMes(pagar,meses):
+    return round(pagar / meses, 2)
 
-while correcto !=True:
+salir = False
+
+while salir !=True:
     try:
         pagar = float(input("Introduce el importe a pagar en euros: "))
         meses = int(input("Introduce el número de meses: "))
@@ -17,12 +20,20 @@ while correcto !=True:
         if meses <= 0:
             raise ValueError("El número de meses debe ser un entero positivo.")
 
-        apagarCadaMes = round(pagar / meses, 2)
+        apagarCadaMes = calcularPagoAlMes(pagar,meses)
+
+        factura = f"""
+        -- FACTURA --
+        DEBES PAGAR {pagar:.2f}€
+        DURANTE {meses} MESES
+        EN TOTAL PAGAS AL MES
+        -- {apagarCadaMes:.2f}€ --
+        """
     except ValueError as e:
         print("Error:", e)
     except ZeroDivisionError:
         print("Error: no se puede dividir entre cero.")
     else:
-        print(f"Durante {meses} meses tienes que pagar cada mes: {apagarCadaMes} €")
-        correcto = True
+        print(factura)
+        salir = True
 
