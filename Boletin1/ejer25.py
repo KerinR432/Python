@@ -2,8 +2,8 @@
  25. Escribir un programa que reciba por teclado un número y muestre sucesivamente el
 resultado de ir dividiéndolo por dos sucesivamente hasta llegar a un número igual o menor a
 1. Caso de ser necesario los resultados se mostrarán con dos decimales. Un ejemplo de una
-ejecución correcta después de introducir el número 34 ser´ía esta:
- Haz introducido el número 34
+ejecución correcta después de introducir el número 34 sería esta:
+ Has introducido el número 34
  17
  8.5
  4.25
