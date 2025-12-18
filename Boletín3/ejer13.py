@@ -1,11 +1,13 @@
-"""12. Las matrículas españolas constan de un número de cuatro dígitos y tres letras
-cualesquiera en mayúsculas a excepción de las vocales, la Ñ y la Q. Escribe un
-programa que detecte si una matrícula introducida por teclado es válida o no."""
+"""
+3. Modifica el programa anterior contemplando que entre los números y las letras
+podría haber un espacio en blanco (uno solo) o un guión. En ambos casos se
+considerará también que la matrícula es válida (si cumple todo lo demás, claro)
+"""
 import re
 
 #* ----------------------- DECLARAMOS VARIBLES ---------------------
 # Esta variable, es el patrón por el cual, se regira todas las matriculas.
-patron = r"[0-9]{4}[BCDFGHJKLMNPRSTVWXYZ]{3}"
+patron = r"[0-9]{4}(\s|-)?[BCDFGHJKLMNPRSTVWXYZ]{3}"
 # Una variable de las importante; es el controlador, para detener un bucle while.
 salir = False
 
@@ -22,9 +24,6 @@ while not salir:
         # Por si acaso, tenemos un raise que salte un error, sin no encuentra coincidencias
         else:
             raise  Exception ("La matricula no ha sido encontrada, has introducido bien la matricula.")
-    # Por si el usuario es mas listo y quiere meter algo que no sea una matricula
-    except ValueError as e:
-        print("Error, has introducido algo que no es una matricula.",e)
     except:
         print("Error, has introducido algo que no es una matricula.")
 
