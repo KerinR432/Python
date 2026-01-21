@@ -50,7 +50,6 @@ writelines() funciona con una lista
 
 try:
     ficheroEscritura = open("quijote.txt","wt")
-    lista = ["vivia un freddy, tan contecto como un niño","pepe"]
     ficheroEscritura.write("En algun lugar de Caracas\n")
     ficheroEscritura.write(" cuyo lugar nadie se acuerda\n")
     ficheroEscritura.writelines(lista)
@@ -72,25 +71,6 @@ try:
     ficheroAppend.write(" cuyo lugar nadie se acuerda\n")
 
     ficheroAppend.close("Escritura")
-
-except :
-    print("Error al manipular el fichero")
-
-#===================================================================================================================
-
-#a veriguar donde esta el cursor
-try:
-    ficherBuscarCurso = open("quijote.txt","r+")
-    print(ficherBuscarCurso.read())
-    print(ficherBuscarCurso.tell()) #* esto muestra donde esta el cursor imaginario
-    ficherBuscarCurso.write("xxxxx")
-    print(ficherBuscarCurso.read())
-    print(ficherBuscarCurso.tell())
-    ficherBuscarCurso.seek(0) #* Manipula el cursor, el "0" lleva al principio del ficher, "0,2" lo pone al final del ficher
-                                #*con seek(n) lo colaca donde tu le indiques
-    print(ficherBuscarCurso.tell())
-    ficherBuscarCurso.seek(ficherBuscarCurso.tell() + 10)
-    print(ficherBuscarCurso.tell())
 
 except :
     print("Error al manipular el fichero")
