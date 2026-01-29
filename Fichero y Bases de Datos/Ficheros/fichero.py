@@ -14,17 +14,17 @@ try:
     #* w = modo escritura, sino existe lo crea
     #* a = lo que hace es que aunque exista el fichero, no sobreescribe, sino que pone el texto debajo de el.
     #* || "t" es modo texto y "b" es modo binario
-    fichero = open("quijote.txt","rt")
+    fichero = open("quijote.txt", "rt")
     textoRead = fichero.read() # leer fichero completo
     print(textoRead)
     fichero.close()
     print("========================")
-    fichero = open("quijote.txt","rt")
+    fichero = open("quijote.txt", "rt")
     textoReadLine = fichero.readlines() # lee linea completa
     print(textoReadLine)
     fichero.close()
     print("========================")
-    fichero = open("quijote.txt","rt")
+    fichero = open("quijote.txt", "rt")
     textoReadLine = fichero.readline(6) # que sea 4 caraceteres
     while textoReadLine!="":
         if textoReadLine[-1]=="\n":#Eliminamos el ultimo salto de linea sin eliminar ningun caracteer
@@ -49,7 +49,7 @@ writelines() funciona con una lista
 """
 
 try:
-    ficheroEscritura = open("quijote.txt","wt")
+    ficheroEscritura = open("quijote.txt", "wt")
     ficheroEscritura.write("En algun lugar de Caracas\n")
     ficheroEscritura.write(" cuyo lugar nadie se acuerda\n")
     ficheroEscritura.writelines(lista)
@@ -66,7 +66,7 @@ Este modo no sobre escribe ni borra, lo coloca abajo
 """
 
 try:
-    ficheroAppend = open("quijote.txt","at")
+    ficheroAppend = open("quijote.txt", "at")
     ficheroAppend.write("En algun lugar de Caracas\n")
     ficheroAppend.write(" cuyo lugar nadie se acuerda\n")
 
